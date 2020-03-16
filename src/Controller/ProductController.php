@@ -27,4 +27,28 @@ class ProductController
     {
         return new Response($this->twig->render('product/index.html.twig'));
     }
+
+    /**
+     * @Route("/products/edit", name="product.edit")
+     */
+    public function editProducts()
+    {
+        return new Response($this->twig->render('product/edit.html.twig'));
+    }
+
+    /**
+     * @Route("/products/add", name="product.add")
+     */
+    public function addProducts()
+    {
+        return new Response($this->twig->render('product/add.html.twig'));
+    }
+
+    /**
+     * @Route("/products/show", name="product.show")
+     */
+    public function showProducts()
+    {
+        return new Response($this->twig->render('product/show.html.twig'));
+    }
 }

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a0059f-4d05-4601-b6b2-907a3f9a4b7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,22 +19,37 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZCcfeTssW4WM3xhyRfB3cmm8UO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/product" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -55,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584346622206</updated>
-      <workItem from="1584346631493" duration="4468000" />
+      <workItem from="1584346631493" duration="10507000" />
     </task>
     <servers />
   </component>
@@ -67,6 +85,18 @@
       <screen x="62" y="27" width="1538" height="873" />
     </state>
     <state x="289" y="63" width="1084" height="837" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.27.1538.873@62.27.1538.873" timestamp="1584353019411" />
+    <state x="62" y="27" width="594" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584367085152">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state x="62" y="27" width="594" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.27.1538.873@62.27.1538.873" timestamp="1584367085152" />
+    <state x="564" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584367590103">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state x="564" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.27.1538.873@62.27.1538.873" timestamp="1584367590103" />
+    <state x="497" y="277" width="657" height="380" key="NewPhpClassDialog" timestamp="1584367570053">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state x="497" y="277" width="657" height="380" key="NewPhpClassDialog/62.27.1538.873@62.27.1538.873" timestamp="1584367570053" />
     <state x="626" y="389" width="399" height="156" key="NewPhpFileDialog" timestamp="1584351405602">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
