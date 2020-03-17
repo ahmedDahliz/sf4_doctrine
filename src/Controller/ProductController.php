@@ -5,22 +5,30 @@ namespace App\Controller;
 
 
 use App\Entity\Product;
+use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\RouterInterface;
 use Twig\Environment;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class ProductController
 {
     private $twig;
+    private $router;
+    private $session;
+    private $products = [];
 
     /**
      * PageController constructor.
      */
-    public function __construct(Environment $twig)
+    public function __construct(Environment $twig,RouterInterface $router, SessionInterface $session)
     {
-
         $this->twig = $twig;
+        $this->router = $router;
+        $this->session = $session;
     }
 
     /**
@@ -28,18 +36,7 @@ class ProductController
      */
     public function index()
     {
-        $products = [];
-        $products[] = new Product(1,'prod1',123,12,'description1','https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg','2020-03-12');
-        $products[] = new Product(2,'prod2',1223,10,'description2','https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg','2020-03-12');
-        $products[] = new Product(3,'prod3',194,2,'description3','https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg','2020-03-12');
-        $products[] = new Product(4,'prod4',323,32,'description4','https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg','2020-03-12');
-        $products[] = new Product(5,'prod5',243,84,'description5','https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg','2020-03-12');
-        $products[] = new Product(6,'prod6',673,15,'description6','https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg','2020-03-12');
-        $products[] = new Product(7,'prod7',1353,37,'description7','https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg','2020-03-12');
-        $products[] = new Product(8,'prod8',233,22,'description8','https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg','2020-03-12');
-
-
-        return new Response($this->twig->render('product/index.html.twig', ['products' => $products]));
+        return new Response($this->twig->render('product/index.html.twig', ['products' => $this->session->get('products')]));
     }
 
     /**
@@ -58,12 +55,31 @@ class ProductController
         return new Response($this->twig->render('product/add.html.twig'));
     }
 
+    /**
+     * @Route("/products/save", name="products.save")
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function save(Request $request)
+    {
+        if ($request->getMethod() == 'POST') {
+            if ($this->session->has('products')) {
+                $product = $this->session->get('products');
+                $product[] = new Product(mt_rand(1, 1000), $request->get('Name'), $request->get('Price'), $request->get('Quantity'), $request->get('Description'), 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg', date("d/m/Y"));
+                $this->session->set('products', $product);
+            } else {
+                $this->products[] = new Product(1, $request->get('Name'), $request->get('Price'), $request->get('Quantity'), $request->get('Description'), 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg', date("d/m/Y"));
+                $this->session->set('products', $this->products);
+            }
+        }
+        return new RedirectResponse($this->router->generate('products.index'), 301);
+    }
 
     /**
-     * @Route("/products/show", name="products.show")
+     * @Route("/products/show/{idProduct}", name="products.show")
      */
-    public function show()
+    public function show($idProduct)
     {
-        return new Response($this->twig->render('product/show.html.twig'));
+        return new Response($this->twig->render('product/show.html.twig', ['id'=> $idProduct]));
     }
 }
