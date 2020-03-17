@@ -2,4 +2,38 @@
 
 {% block content %}
     <h2>Products list</h2>
+    <div class="m-3">
+        <a href="{{ path('products.add') }}" class="btn btn-success"><i class="fas fa-plus"></i> Add product</a>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>image</th>
+                <th>Name</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>description</th>
+                <th>create at</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        {% for product in products %}
+            <tr>
+                <td>{{ product.getId }}</td>
+                <td><img width="100" src="{{ product.getImageUrl }} " alt="{{ product.getImageUrl }}" > </td>
+                <td>{{ product.getName }}</td>
+                <td>{{ product.getPrice }}</td>
+                <td>{{ product.getQuantity }}</td>
+                <td>{{ product.getDescription }}</td>
+                <td>{{ product.getCreatedAt }}</td>
+                <td>
+                    <a href="{{ path('products.show') }}" class="btn btn-primary"><i class="fas fa-clipboard-list"></i></a>
+                    <a href="{{ path('products.edit') }}" class="btn btn-warning"><i class="fas fa-pen"></i></a>
+                    <a href="{{ path('products.edit') }}" class="btn btn-danger"><i class="fas fa-times"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

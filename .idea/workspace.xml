@@ -2,22 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a0059f-4d05-4601-b6b2-907a3f9a4b7f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sf4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sf4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_1.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_1.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_10.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_10.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_2.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_2.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_3.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_3.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_4.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_4.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_5.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_5.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_6.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_6.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_7.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_7.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_8.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_8.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_9.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_9.ibt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/auto.cnf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/auto.cnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/binlog.000002" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/binlog.000002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/binlog.index" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/binlog.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ibtmp1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/mysql.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/undo_001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/undo_002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/add.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,6 +71,51 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1ZCcfeTssW4WM3xhyRfB3cmm8UO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -44,6 +132,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -73,7 +162,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584346622206</updated>
-      <workItem from="1584346631493" duration="10507000" />
+      <workItem from="1584346631493" duration="18820000" />
+      <workItem from="1584433232646" duration="2010000" />
+      <workItem from="1584435539171" duration="683000" />
+      <workItem from="1584436255882" duration="157000" />
+      <workItem from="1584436435104" duration="2050000" />
     </task>
     <servers />
   </component>
@@ -81,10 +174,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="426" y="125" width="800" height="684" key="#Notifications" timestamp="1584433269536">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state x="426" y="125" width="800" height="684" key="#Notifications/62.27.1538.873@62.27.1538.873" timestamp="1584433269536" />
     <state x="289" y="63" width="1084" height="837" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584353019411">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
     <state x="289" y="63" width="1084" height="837" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.27.1538.873@62.27.1538.873" timestamp="1584353019411" />
+    <state x="527" y="268" width="597" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584436173901">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state x="527" y="268" width="597" height="397" key="#com.intellij.fileTypes.FileTypeChooser/62.27.1538.873@62.27.1538.873" timestamp="1584436173901" />
+    <state x="639" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1584369430859">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state x="639" y="182" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/62.27.1538.873@62.27.1538.873" timestamp="1584369430859" />
     <state x="62" y="27" width="594" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584367085152">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
@@ -93,10 +198,26 @@
       <screen x="62" y="27" width="1538" height="873" />
     </state>
     <state x="564" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.27.1538.873@62.27.1538.873" timestamp="1584367590103" />
-    <state x="497" y="277" width="657" height="380" key="NewPhpClassDialog" timestamp="1584367570053">
+    <state width="1492" height="134" key="GridCell.Tab.0.bottom" timestamp="1584383190205">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state x="497" y="277" width="657" height="380" key="NewPhpClassDialog/62.27.1538.873@62.27.1538.873" timestamp="1584367570053" />
+    <state width="1492" height="134" key="GridCell.Tab.0.bottom/62.27.1538.873@62.27.1538.873" timestamp="1584383190205" />
+    <state width="1492" height="134" key="GridCell.Tab.0.center" timestamp="1584383190204">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state width="1492" height="134" key="GridCell.Tab.0.center/62.27.1538.873@62.27.1538.873" timestamp="1584383190204" />
+    <state width="1492" height="134" key="GridCell.Tab.0.left" timestamp="1584383190204">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state width="1492" height="134" key="GridCell.Tab.0.left/62.27.1538.873@62.27.1538.873" timestamp="1584383190204" />
+    <state width="1492" height="134" key="GridCell.Tab.0.right" timestamp="1584383190205">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state width="1492" height="134" key="GridCell.Tab.0.right/62.27.1538.873@62.27.1538.873" timestamp="1584383190205" />
+    <state x="572" y="223" width="657" height="380" key="NewPhpClassDialog" timestamp="1584369060755">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state x="572" y="223" width="657" height="380" key="NewPhpClassDialog/62.27.1538.873@62.27.1538.873" timestamp="1584369060755" />
     <state x="626" y="389" width="399" height="156" key="NewPhpFileDialog" timestamp="1584351405602">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
@@ -105,9 +226,13 @@
       <screen x="62" y="27" width="1538" height="873" />
     </state>
     <state x="320" y="98" width="1022" height="737" key="SettingsEditor/62.27.1538.873@62.27.1538.873" timestamp="1584351942280" />
-    <state x="487" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1584346639159">
+    <state x="487" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1584433244857">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state x="487" y="291" key="com.intellij.ide.util.TipDialog/62.27.1538.873@62.27.1538.873" timestamp="1584346639159" />
+    <state x="487" y="291" key="com.intellij.ide.util.TipDialog/62.27.1538.873@62.27.1538.873" timestamp="1584433244857" />
+    <state x="494" y="214" key="search.everywhere.popup" timestamp="1584368962561">
+      <screen x="62" y="27" width="1538" height="873" />
+    </state>
+    <state x="494" y="214" key="search.everywhere.popup/62.27.1538.873@62.27.1538.873" timestamp="1584368962561" />
   </component>
 </project>

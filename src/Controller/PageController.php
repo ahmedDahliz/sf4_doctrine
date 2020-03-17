@@ -17,7 +17,7 @@ class PageController
         $this->twig = $twig;
     }
     /**
-     * @Route("/", name="page.home")
+     * @Route("/", name="pages.home")
      */
     public function home()
     {
@@ -25,7 +25,7 @@ class PageController
     }
 
     /**
-     * @Route("/about", name="page.about")
+     * @Route("/about", name="pages.about")
      */
     public function about()
     {
