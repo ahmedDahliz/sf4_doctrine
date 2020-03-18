@@ -30,8 +30,8 @@
                 <td>{{ product.getCreatedAt }}</td>
                 <td>
                     <a href="{{ path('products.show', {idProduct: product.getId }) }}" class="btn btn-primary"><i class="fas fa-clipboard-list"></i></a>
-                    <a href="{{ path('products.edit') }}" class="btn btn-warning"><i class="fas fa-pen"></i></a>
-                    <a href="{{ path('products.edit') }}" class="btn btn-danger"><i class="fas fa-times"></i></a>
+                    <a href="{{ path('products.edit', {idProduct: product.getId }) }}" class="btn btn-warning"><i class="fas fa-pen"></i></a>
+                    <a href="{{ path('products.delete', {idProduct: product.getId }) }}" class="btn btn-danger"><i class="fas fa-times"></i></a>
                 </td>
             </tr>
         {% endfor %}

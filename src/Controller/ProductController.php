@@ -19,7 +19,6 @@ class ProductController
     private $twig;
     private $router;
     private $session;
-    private $products = [];
 
     /**
      * PageController constructor.
@@ -40,11 +39,48 @@ class ProductController
     }
 
     /**
-     * @Route("/products/edit", name="products.edit")
+     * @Route("/products/edit/{idProduct}", name="products.edit")
+     * @param $idProduct
+     * @return Response
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
      */
-    public function edit()
+    public function edit($idProduct)
     {
-        return new Response($this->twig->render('product/edit.html.twig'));
+        $product = [];
+        foreach ($this->session->get('products') as $prod) {
+            if ($prod->getId() == $idProduct){
+                    $product = $prod;
+                    break;
+            }
+        }
+        return new Response($this->twig->render('product/edit.html.twig', ['product' => $product]));
+    }
+
+    /**
+     * @Route("/products/update/{idProduct}", name="products.update")
+     * @param Request $request
+     * @param $idProduct
+     * @return Response
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
+    public function update(Request $request, $idProduct)
+    {
+        $products = $this->session->get('products');
+        foreach ($products as $key => $prod) {
+            if ($prod->getId() == $idProduct){
+                $products[$key]->setName($request->get('Name'));
+                $products[$key]->setPrice($request->get('Price'));
+                $products[$key]->setQuantity($request->get('Quantity'));
+                $products[$key]->setDescription($request->get('Description'));
+                $this->session->set('products', $products);
+                break;
+            }
+        }
+        return new RedirectResponse($this->router->generate('products.index'));
     }
 
     /**
@@ -62,21 +98,48 @@ class ProductController
      */
     public function save(Request $request)
     {
+        $products = [];
         if ($request->getMethod() == 'POST') {
             if ($this->session->has('products')) {
-                $product = $this->session->get('products');
-                $product[] = new Product(mt_rand(1, 1000), $request->get('Name'), $request->get('Price'), $request->get('Quantity'), $request->get('Description'), 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg', date("d/m/Y"));
-                $this->session->set('products', $product);
+                $products = $this->session->get('products');
+
+                $products[] = new Product(end($products)->getId()+1, $request->get('Name'), $request->get('Price'), $request->get('Quantity'), $request->get('Description'), 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg', date("d/m/Y"));
+                $this->session->set('products', $products);
             } else {
-                $this->products[] = new Product(1, $request->get('Name'), $request->get('Price'), $request->get('Quantity'), $request->get('Description'), 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg', date("d/m/Y"));
-                $this->session->set('products', $this->products);
+                $products[] = new Product(1, $request->get('Name'), $request->get('Price'), $request->get('Quantity'), $request->get('Description'), 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg', date("d/m/Y"));
+                $this->session->set('products', $products);
             }
         }
-        return new RedirectResponse($this->router->generate('products.index'), 301);
+        return new RedirectResponse($this->router->generate('products.index'));
     }
 
     /**
+     * @Route("/products/delete/{idProduct}", name="products.delete")
+     * @param $idProduct
+     * @return RedirectResponse
+     */
+    public function delete($idProduct)
+    {
+            $products = $this->session->get('products');
+            foreach ($products as $key => $product) {
+                if ($product->getId() == $idProduct){
+                    unset($products[$key]);
+                    break;
+                }
+            }
+            $this->session->set('products', $products);
+
+        return new RedirectResponse($this->router->generate('products.index'), 301);
+    }
+
+
+    /**
      * @Route("/products/show/{idProduct}", name="products.show")
+     * @param $idProduct
+     * @return Response
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
      */
     public function show($idProduct)
     {
