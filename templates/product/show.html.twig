@@ -1,5 +1,30 @@
 {% extends "base.html.twig" %}
 
 {% block content %}
-    <h2>Show product {{ id }}</h2>
+    <h2>Show product</h2>
+    <div class="d-flex justify-content-around m-5">
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{ product.getName }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ product.getDescription }}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{ product.getQuantity }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ product.getPrice }}</td>
+            </tr>
+            <tr>
+                <th>Created at</th>
+                <td>{{ product.getCreatedAt }}</td>
+            </tr>
+        </table>
+        <img src="{{ product.getImageUrl }}" alt="{{ product.getName }}" class="img-thumbnail" width="200">
+    </div>
 {% endblock %}

@@ -143,6 +143,13 @@ class ProductController
      */
     public function show($idProduct)
     {
-        return new Response($this->twig->render('product/show.html.twig', ['id'=> $idProduct]));
+        $product = null;
+        foreach ($this->session->get('products') as $prod) {
+            if ($prod->getId() == $idProduct){
+                $product = $prod;
+                break;
+            }
+        }
+        return new Response($this->twig->render('product/show.html.twig', ['product'=> $product]));
     }
 }
