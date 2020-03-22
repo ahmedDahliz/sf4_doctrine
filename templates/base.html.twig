@@ -15,7 +15,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
-    {{ encore_entry_link_tags('app') }}
+{#    {{ encore_entry_link_tags('app') }}#}
+    <style>
+        body {
+            background-color: lightgray;
+            margin-top: 100px;
+        }
+
+        main {
+            margin: 30px;
+        }
+    </style>
     {% block style %}{% endblock %}
 </head>
 <body>
@@ -42,6 +52,6 @@
 
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 <script src="../../assets/js/vendor/holder.min.js"></script>
-{{ encore_entry_script_tags('app') }}
-</body>
+{#{{ encore_entry_script_tags('app') }}#}
+</body>g
 </html>
