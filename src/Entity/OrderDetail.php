@@ -11,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class OrderDetail
 {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -24,12 +25,12 @@ class OrderDetail
     private $quantity;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="orderdetail")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="orderdetail")
      */
     private $product;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Order", mappedBy="orderDetail")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Order", inversedBy="orderDetail")
      */
     private $orderProduct;
 
@@ -57,9 +58,9 @@ class OrderDetail
     }
 
     /**
-     * @return Collection|Product[]
+     * @return Collection|Product[]|Product
      */
-    public function getProduct(): Collection
+    public function getProduct()
     {
         return $this->product;
     }
@@ -88,9 +89,9 @@ class OrderDetail
     }
 
     /**
-     * @return Collection|Order[]
+     * @return Collection|Order[]|Order
      */
-    public function getOrderProduct(): Collection
+    public function getOrderProduct()
     {
         return $this->orderProduct;
     }
@@ -114,6 +115,20 @@ class OrderDetail
                 $orderProduct->setOrderDetail(null);
             }
         }
+
+        return $this;
+    }
+
+    public function setProduct(?Product $product): self
+    {
+        $this->product = $product;
+
+        return $this;
+    }
+
+    public function setOrderProduct(?Order $orderProduct): self
+    {
+        $this->orderProduct = $orderProduct;
 
         return $this;
     }

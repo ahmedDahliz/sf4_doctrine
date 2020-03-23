@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -9,6 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Product
 {
+    public function __construct()
+    {
+        $this->setCreatedAt(new \DateTime());
+        $this->orderdetail = new ArrayCollection();
+    }
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -42,8 +50,8 @@ class Product
     private $imageURL;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\OrderDetail", inversedBy="product")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\OneToMany(targetEntity="App\Entity\OrderDetail", mappedBy="product", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=true)
      */
     private $orderdetail;
 
@@ -141,6 +149,29 @@ class Product
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function addOrderdetail(OrderDetail $orderdetail): self
+    {
+        if (!$this->orderdetail->contains($orderdetail)) {
+            $this->orderdetail[] = $orderdetail;
+            $orderdetail->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOrderdetail(OrderDetail $orderdetail): self
+    {
+        if ($this->orderdetail->contains($orderdetail)) {
+            $this->orderdetail->removeElement($orderdetail);
+            // set the owning side to null (unless already changed)
+            if ($orderdetail->getProduct() === $this) {
+                $orderdetail->setProduct(null);
+            }
+        }
 
         return $this;
     }

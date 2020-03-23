@@ -1,3 +1,4 @@
+{% set basket = app.session.get('basket') %}
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">MyProduct</a>
@@ -11,6 +12,9 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ path('products.index') }}">Products <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path('order.basket') }}">Basket ({{ basket|length }}) <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ path('pages.about') }}">About <span class="sr-only">(current)</span></a>

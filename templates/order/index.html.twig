@@ -1,0 +1,52 @@
+{% extends "base.html.twig" %}
+{% set basket = app.session.get('basket') %}
+{% block content %}
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <h2>Basket</h2>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>image</th>
+            <th>Name</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        {% if basket > 0 %}
+            {% for product in basket %}
+                <tr>
+                    <td>{{ product.product.getId }}</td>
+                    <td><img width="100" src="{{ product.product.getImageUrl }} " alt="{{ product.product.getName }}" > </td>
+                    <td>{{ product.product.getName }}</td>
+                    <td>{{ product.product.getPrice| price }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>
+                        <a href="{{ path('order.delete', {idProduct: product.product.getId }) }}" class="btn btn-danger"><i class="fas fa-clipboard-list"></i>Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="6" class="text-center"> Your basket is empty</td>
+            </tr>
+        {% endif %}
+        <tr>
+            <td colspan="6">
+                <a href="{{ path('order.index') }}" class="btn btn-success">Submit basket</a>
+            </td>
+        </tr>
+    </table>
+
+{% endblock %}

@@ -18,13 +18,38 @@
             </tr>
             <tr>
                 <th>Price</th>
-                <td>{{ product.getPrice }}</td>
+                <td>{{ product.getPrice| price }}</td>
             </tr>
             <tr>
                 <th>Created at</th>
-                <td>{{ product.getCreatedAt }}</td>
+                <td>{{ product.getCreatedAt|date('Y-m-d')  }}</td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="{{ path('products.edit', {idProduct: product.getId }) }}" class="btn btn-warning"><i class="fas fa-pen"></i>Edit</a></td>
             </tr>
         </table>
         <img src="{{ product.getImageUrl }}" alt="{{ product.getName }}" class="img-thumbnail" width="200">
     </div>
+
+    <h2>Orders related to this product</h2>
+    <table class="table">
+        <thead  class="thead-dark">
+            <tr>
+                <th>Command Id</th>
+                <th>Product</th>
+                <th>Unit price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        {% for orderDetail in orderDetails %}
+            <tr>
+                <td>{{ orderDetail.getOrderProduct.getId }}</td>
+                <td>{{ orderDetail.getProduct.getName }}</td>
+                <td>{{ orderDetail.getProduct.getPrice| price }}</td>
+                <td>{{ orderDetail.quantity }}</td>
+            </tr>
+        {% endfor %}
+
+
+    </table>
 {% endblock %}
