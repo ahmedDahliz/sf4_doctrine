@@ -4,7 +4,7 @@
 namespace App\Controller;
 
 
-use App\Entity\Product;
+use App\Entity\ProductOld;
 use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -100,15 +100,8 @@ class ProductController
     {
         $products = [];
         if ($request->getMethod() == 'POST') {
-            if ($this->session->has('products')) {
-                $products = $this->session->get('products');
 
-                $products[] = new Product(end($products)->getId()+1, $request->get('Name'), $request->get('Price'), $request->get('Quantity'), $request->get('Description'), 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg', date("d/m/Y"));
-                $this->session->set('products', $products);
-            } else {
-                $products[] = new Product(1, $request->get('Name'), $request->get('Price'), $request->get('Quantity'), $request->get('Description'), 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg', date("d/m/Y"));
-                $this->session->set('products', $products);
-            }
+
         }
         return new RedirectResponse($this->router->generate('products.index'));
     }

@@ -2,136 +2,146 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
+ */
 class Product
 {
-
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
     private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $name;
+
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=0)
+     */
     private $price;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
     private $quantity;
+
+    /**
+     * @ORM\Column(type="text")
+     */
     private $description;
-    private $imageUrl;
-    private $createAt;
 
     /**
-     * Product constructor.
-     * @param $id
-     * @param $name
-     * @param $price
-     * @param $quantity
-     * @param $description
-     * @param $imageUrl
-     * @param $createAt
+     * @ORM\Column(type="string", length=255)
      */
-    public function __construct($id, $name, $price, $quantity, $description, $imageUrl, $createAt)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->price = $price;
-        $this->quantity = $quantity;
-        $this->description = $description;
-        $this->imageUrl = $imageUrl;
-        $this->createAt = $createAt;
-    }
-
+    private $imageURL;
 
     /**
-     * @return mixed
+     * @ORM\ManyToOne(targetEntity="App\Entity\OrderDetail", inversedBy="product")
+     * @ORM\JoinColumn(nullable=false)
      */
-    public function getId()
+    private $orderdetail;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
+    public function getId(): ?int
     {
         return $this->id;
     }
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-    /**
-     * @return mixed
-     */
-    public function getName()
+
+    public function getName(): ?string
     {
         return $this->name;
     }
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
+
+    public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
     }
-    /**
-     * @return mixed
-     */
-    public function getPrice()
+
+    public function getPrice(): ?string
     {
         return $this->price;
     }
-    /**
-     * @param mixed $price
-     */
-    public function setPrice($price)
+
+    public function setPrice(string $price): self
     {
         $this->price = $price;
+
+        return $this;
     }
-    /**
-     * @return mixed
-     */
-    public function getQuantity()
+
+    public function getQuantity(): ?int
     {
         return $this->quantity;
     }
-    /**
-     * @param mixed $quantity
-     */
-    public function setQuantity($quantity)
+
+    public function setQuantity(int $quantity): self
     {
         $this->quantity = $quantity;
+
+        return $this;
     }
-    /**
-     * @return mixed
-     */
-    public function getDescription()
+
+    public function getDescription(): ?string
     {
         return $this->description;
     }
-    /**
-     * @param mixed $description
-     */
-    public function setDescription($description)
+
+    public function setDescription(string $description): self
     {
         $this->description = $description;
-    }
-    /**
-     * @return mixed
-     */
-    public function getImageUrl()
-    {
-        return $this->imageUrl;
-    }
-    /**
-     * @param mixed $imageUrl
-     */
-    public function setImageUrl($imageUrl)
-    {
-        $this->imageUrl = $imageUrl;
-    }
-    /**
-     * @return mixed
-     */
-    public function getCreatedAt()
-    {
-        return $this->createAt;
-    }
-    /**
-     * @param mixed $createdAt
-     */
-    public function setCreatedAt($createAt)
-    {
-        $this->$createAt = $createAt;
+
+        return $this;
     }
 
+    public function getImageURL(): ?string
+    {
+        return $this->imageURL;
+    }
+
+    public function setImageURL(string $imageURL): self
+    {
+        $this->imageURL = $imageURL;
+
+        return $this;
+    }
+
+    public function getLastProduct(){
+
+    }
+
+    public function getOrderdetail(): ?OrderDetail
+    {
+        return $this->orderdetail;
+    }
+
+    public function setOrderdetail(?OrderDetail $orderdetail): self
+    {
+        $this->orderdetail = $orderdetail;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
 }

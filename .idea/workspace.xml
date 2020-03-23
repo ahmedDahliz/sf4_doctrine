@@ -9,27 +9,10 @@
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_1.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_1.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_10.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_10.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_2.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_2.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_3.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_3.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_4.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_4.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_5.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_5.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_6.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_6.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_7.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_7.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_8.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_8.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_9.ibt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_9.ibt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/binlog.000005" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/binlog.000005" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/binlog.index" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/binlog.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ib_buffer_pool" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ibtmp1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/mysql.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/undo_001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/undo_002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product_old.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +40,24 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="sf4@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sf4@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sf4@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sf4: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sf4@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sf4: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="order: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -142,6 +143,8 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZCcfeTssW4WM3xhyRfB3cmm8UO" />
@@ -181,7 +184,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:sf4@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@33d3d435" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2ec22927" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -219,10 +222,10 @@
       <screen x="62" y="27" width="1538" height="873" />
     </state>
     <state x="426" y="125" width="800" height="684" key="#Notifications/62.27.1538.873@62.27.1538.873" timestamp="1584433269536" />
-    <state x="272" y="50" width="1084" height="837" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584915175156">
+    <state x="341" y="63" width="1084" height="837" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584952977169">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state x="272" y="50" width="1084" height="837" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.27.1538.873@62.27.1538.873" timestamp="1584915175156" />
+    <state x="341" y="63" width="1084" height="837" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.27.1538.873@62.27.1538.873" timestamp="1584952977169" />
     <state x="527" y="268" width="597" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584436173901">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
@@ -231,30 +234,30 @@
       <screen x="62" y="27" width="1538" height="873" />
     </state>
     <state x="639" y="182" width="412" height="569" key="#com.intellij.ide.util.MemberChooser/62.27.1538.873@62.27.1538.873" timestamp="1584443366654" />
-    <state x="62" y="27" width="594" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584367085152">
+    <state x="62" y="27" width="594" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584949830081">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state x="62" y="27" width="594" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.27.1538.873@62.27.1538.873" timestamp="1584367085152" />
+    <state x="62" y="27" width="594" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.27.1538.873@62.27.1538.873" timestamp="1584949830081" />
     <state x="564" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1584367590103">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
     <state x="564" y="221" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/62.27.1538.873@62.27.1538.873" timestamp="1584367590103" />
-    <state width="1023" height="216" key="GridCell.Tab.0.bottom" timestamp="1584800411489">
+    <state width="1023" height="216" key="GridCell.Tab.0.bottom" timestamp="1584953348245">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state width="1023" height="216" key="GridCell.Tab.0.bottom/62.27.1538.873@62.27.1538.873" timestamp="1584800411489" />
-    <state width="1023" height="216" key="GridCell.Tab.0.center" timestamp="1584800411488">
+    <state width="1023" height="216" key="GridCell.Tab.0.bottom/62.27.1538.873@62.27.1538.873" timestamp="1584953348245" />
+    <state width="1023" height="216" key="GridCell.Tab.0.center" timestamp="1584953348243">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state width="1023" height="216" key="GridCell.Tab.0.center/62.27.1538.873@62.27.1538.873" timestamp="1584800411488" />
-    <state width="1023" height="216" key="GridCell.Tab.0.left" timestamp="1584800411487">
+    <state width="1023" height="216" key="GridCell.Tab.0.center/62.27.1538.873@62.27.1538.873" timestamp="1584953348243" />
+    <state width="1023" height="216" key="GridCell.Tab.0.left" timestamp="1584953348243">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state width="1023" height="216" key="GridCell.Tab.0.left/62.27.1538.873@62.27.1538.873" timestamp="1584800411487" />
-    <state width="1023" height="216" key="GridCell.Tab.0.right" timestamp="1584800411488">
+    <state width="1023" height="216" key="GridCell.Tab.0.left/62.27.1538.873@62.27.1538.873" timestamp="1584953348243" />
+    <state width="1023" height="216" key="GridCell.Tab.0.right" timestamp="1584953348244">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state width="1023" height="216" key="GridCell.Tab.0.right/62.27.1538.873@62.27.1538.873" timestamp="1584800411488" />
+    <state width="1023" height="216" key="GridCell.Tab.0.right/62.27.1538.873@62.27.1538.873" timestamp="1584953348244" />
     <state x="572" y="223" width="657" height="380" key="NewPhpClassDialog" timestamp="1584369060755">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
