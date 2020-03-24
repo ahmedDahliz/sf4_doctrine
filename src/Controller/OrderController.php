@@ -36,7 +36,6 @@ class OrderController extends AbstractController
         $this->flash = $flashBag;
     }
 
-
     /**
      * @Route("/order", name="order.index")
      */
