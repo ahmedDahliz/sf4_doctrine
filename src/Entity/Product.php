@@ -37,10 +37,12 @@ class Product
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=0)
-     * @Assert\Currency(
+     * @Assert\Positive(
      *     message="The value of the price field is invalid !"
      * )
-     * @Assert\NotBlank
+     * @Assert\NotBlank(
+     *     message="The price should not be blank !"
+     * )
      */
     private $price;
 
@@ -50,8 +52,9 @@ class Product
      * @Assert\Range(
      *      min = 10,
      *      max = 10000,
-     *      minMessage = "You must be at least {{ limit }}cm tall to enter",
-     *      maxMessage = "You cannot be taller than {{ limit }}cm to enter"
+     *      minMessage = "Quantity must be at least {{ limit }} unit",
+     *      maxMessage = "Quantity cannot be taller than {{ limit }} unit",
+     *      notInRangeMessage="Quantity value should be between 10 and 10000."
      * )
      */
     private $quantity;

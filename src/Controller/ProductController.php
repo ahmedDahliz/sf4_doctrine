@@ -8,12 +8,18 @@ use App\Entity\Product;
 use App\Repository\OrderDetailRepository;
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Twig\Environment;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -97,33 +103,71 @@ class ProductController extends AbstractController
     /**
      * @Route("/products/add", name="products.add")
      */
-    public function add()
+    public function add(Request $request)
     {
-        return new Response($this->twig->render('product/add.html.twig'));
+        $product = new Product();
+        $form = $this->createFormBuilder($product)
+            ->add('Name', TextType::class)
+            ->add('Price', MoneyType::class)
+            ->add('Quantity', IntegerType::class)
+            ->add('imageUrl', TextareaType::class, array(
+                'label' => 'Image',
+                'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
+            ))
+            ->add('Description', TextareaType::class)
+            ->add('save', SubmitType::class, ['label' => 'Submit'])
+            ->getForm();
+//        $form->handleRequest($request);
+        return new Response($this->twig->render('product/add.html.twig', ['form'=> $form->createView()]));
     }
 
     /**
      * @Route("/products/save", name="products.save")
      * @param Request $request
-     * @return RedirectResponse
+     * @param ValidatorInterface $validator
+     * @return Response
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
      */
-    public function save(Request $request)
+    public function save(Request $request, ValidatorInterface $validator)
     {
-        if ($request->getMethod() == 'POST') {
-            $product = new Product();
+        $product = new Product();
+        $form = $this->createFormBuilder($product)
+            ->add('Name', TextType::class)
+            ->add('Price', MoneyType::class)
+            ->add('Quantity', IntegerType::class)
+            ->add('Description', TextareaType::class)
+            ->add('imageUrl', TextareaType::class, array(
+                'label' => 'Image',
+                'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
+            ))
+            ->add('save', SubmitType::class, ['label' => 'Submit'])
+            ->getForm();
+            $form->handleRequest($request);
 
-            $product->setName($request->get('Name'));
-            $product->setPrice($request->get('Price'));
-            $product->setQuantity($request->get('Quantity'));
-            $product->setDescription($request->get('Description'));
-            $product->setImageURL('https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg');
-
+        if ($form->isSubmitted() && $form->isValid()) {
+            $product = $form->getData();
             $this->entityManager->persist($product);
             $this->entityManager->flush();
             $this->flashbag->add('success', 'The product is added successfully');
-
+            return $this->redirectToRoute('products.index');
         }
-        return new RedirectResponse($this->router->generate('products.index'));
+
+        return new Response($this->twig->render('product/add.html.twig', ['form'=> $form->createView()]));
+//        if ($request->getMethod() == 'POST') {
+//            dd('ddee');
+//
+////            $product->setName($request->get('Name'));
+////            $product->setPrice($request->get('Price'));
+////            $product->setQuantity($request->get('Quantity'));
+////            $product->setDescription($request->get('Description'));
+////            $product->setImageURL('https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg');
+////
+
+//
+//        }
+
     }
 
     /**
