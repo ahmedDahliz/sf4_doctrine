@@ -5,9 +5,11 @@ namespace App\Controller;
 
 
 use App\Entity\Product;
+use App\Form\ProductType;
 use App\Repository\OrderDetailRepository;
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -103,21 +105,22 @@ class ProductController extends AbstractController
     /**
      * @Route("/products/add", name="products.add")
      */
-    public function add(Request $request)
+    public function add()
     {
+        //for Q2
+        //$form = $this->createFormBuilder($product)
+//          ->add('Name', TextType::class)
+//          ->add('Price', MoneyType::class)
+//          ->add('Quantity', IntegerType::class)
+//          ->add('imageUrl', HiddenType::class, array(
+//              'label' => 'Image',
+//              'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
+//          ))
+//          ->add('Description', TextareaType::class)
+//          ->add('save', SubmitType::class, ['label' => 'Submit'])
+//          ->getForm();
         $product = new Product();
-        $form = $this->createFormBuilder($product)
-            ->add('Name', TextType::class)
-            ->add('Price', MoneyType::class)
-            ->add('Quantity', IntegerType::class)
-            ->add('imageUrl', TextareaType::class, array(
-                'label' => 'Image',
-                'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
-            ))
-            ->add('Description', TextareaType::class)
-            ->add('save', SubmitType::class, ['label' => 'Submit'])
-            ->getForm();
-//        $form->handleRequest($request);
+        $form = $this->createForm(ProductType::class, $product);
         return new Response($this->twig->render('product/add.html.twig', ['form'=> $form->createView()]));
     }
 
@@ -132,19 +135,22 @@ class ProductController extends AbstractController
      */
     public function save(Request $request, ValidatorInterface $validator)
     {
+
+        // for Q2
+//        $form = $this->createFormBuilder($product)
+//            ->add('Name', TextType::class)
+//            ->add('Price', MoneyType::class)
+//            ->add('Quantity', IntegerType::class)
+//            ->add('Description', TextareaType::class)
+//            ->add('imageUrl', TextareaType::class, array(
+//                'label' => 'Image',
+//                'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
+//            ))
+//            ->add('save', SubmitType::class, ['label' => 'Submit'])
+//            ->getForm();
         $product = new Product();
-        $form = $this->createFormBuilder($product)
-            ->add('Name', TextType::class)
-            ->add('Price', MoneyType::class)
-            ->add('Quantity', IntegerType::class)
-            ->add('Description', TextareaType::class)
-            ->add('imageUrl', TextareaType::class, array(
-                'label' => 'Image',
-                'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
-            ))
-            ->add('save', SubmitType::class, ['label' => 'Submit'])
-            ->getForm();
-            $form->handleRequest($request);
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $product = $form->getData();
@@ -153,21 +159,7 @@ class ProductController extends AbstractController
             $this->flashbag->add('success', 'The product is added successfully');
             return $this->redirectToRoute('products.index');
         }
-
         return new Response($this->twig->render('product/add.html.twig', ['form'=> $form->createView()]));
-//        if ($request->getMethod() == 'POST') {
-//            dd('ddee');
-//
-////            $product->setName($request->get('Name'));
-////            $product->setPrice($request->get('Price'));
-////            $product->setQuantity($request->get('Quantity'));
-////            $product->setDescription($request->get('Description'));
-////            $product->setImageURL('https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg');
-////
-
-//
-//        }
-
     }
 
     /**
