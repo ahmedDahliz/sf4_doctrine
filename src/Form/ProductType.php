@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Category;
 use App\Entity\Product;
+use App\Service\CalculPrixTTC;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -20,6 +21,16 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ProductType extends AbstractType
 {
+    private $calculatTTC;
+
+    /**
+     * ProductType constructor.
+     */
+    public function __construct(CalculPrixTTC $calculatTTC)
+    {
+        $this->calculatTTC = $calculatTTC;
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -45,7 +56,7 @@ class ProductType extends AbstractType
             $data = $event->getData();
             $price = $data->getPrice();
             if (!$event->getForm()->get('TTC')->getData()){
-                $data->setPrice($price + ($price*0.2));
+                $data->setPrice($this->calculatTTC->calculerPrixTTC($price));
             }
             // set new data
             $event->setData($data);

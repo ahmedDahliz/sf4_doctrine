@@ -152,7 +152,6 @@ class ProductController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $product = $form->getData();
-//            dd($form->get('Price')->setData(22));
             $this->entityManager->persist($product);
             $this->entityManager->flush();
             $this->flashbag->add('success', 'The product is added successfully');

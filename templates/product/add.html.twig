@@ -17,7 +17,7 @@
 	<div class="d-flex flex-column justify-content-center w-50 mx-auto mt-2 mb-5" >
 		{{ form_start(form, {'method': 'POST', 'action': path('products.save')}) }}
 		<div class="form-group">
-			<label for="product_Price" class="required">Name</label>
+			<label for="product_Name" class="required">Name</label>
 			{{ form_widget(form.Name) }}
 		</div>
 		<div class="form-group">
@@ -28,11 +28,15 @@
 			{{ form_widget(form.TTC, {'checked': 'true'}) }}
 		</div>
 		<div class="form-group">
-			<label for="product_Price" class="required">Quantity</label>
+			<label for="product_Quantity" class="required">Quantity</label>
 			{{ form_widget(form.Quantity) }}
 		</div>
 		<div class="form-group">
-			<label for="product_Price" class="required">Description</label>
+			<label for="product_Category" class="required">Category</label>
+			{{ form_widget(form.Category) }}
+		</div>
+		<div class="form-group">
+			<label for="product_Description" class="required">Description</label>
 			{{ form_widget(form.Description) }}
 		</div>
 		{{ form_row(form.imageUrl) }}
