@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a0059f-4d05-4601-b6b2-907a3f9a4b7f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/CalculPrixTTC.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CalculPrixTTC.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +204,7 @@
       <workItem from="1584794904503" duration="2465000" />
       <workItem from="1584887519682" duration="11842000" />
       <workItem from="1585036285862" duration="23413000" />
-      <workItem from="1585121950194" duration="9785000" />
+      <workItem from="1585121950194" duration="10045000" />
     </task>
     <servers />
   </component>
