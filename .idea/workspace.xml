@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="51a0059f-4d05-4601-b6b2-907a3f9a4b7f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ibdata1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +205,7 @@
       <workItem from="1584794904503" duration="2465000" />
       <workItem from="1584887519682" duration="11842000" />
       <workItem from="1585036285862" duration="23413000" />
-      <workItem from="1585121950194" duration="6788000" />
+      <workItem from="1585121950194" duration="9446000" />
     </task>
     <servers />
   </component>
@@ -255,10 +253,10 @@
       <screen x="62" y="27" width="1538" height="873" />
     </state>
     <state width="1023" height="216" key="GridCell.Tab.0.right/62.27.1538.873@62.27.1538.873" timestamp="1585057314673" />
-    <state x="572" y="223" width="681" height="387" key="NewPhpClassDialog" timestamp="1584985938683">
+    <state x="572" y="223" width="681" height="387" key="NewPhpClassDialog" timestamp="1585143743662">
       <screen x="62" y="27" width="1538" height="873" />
     </state>
-    <state x="572" y="223" width="681" height="387" key="NewPhpClassDialog/62.27.1538.873@62.27.1538.873" timestamp="1584985938683" />
+    <state x="572" y="223" width="681" height="387" key="NewPhpClassDialog/62.27.1538.873@62.27.1538.873" timestamp="1585143743662" />
     <state x="626" y="389" width="399" height="156" key="NewPhpFileDialog" timestamp="1584351405602">
       <screen x="62" y="27" width="1538" height="873" />
     </state>

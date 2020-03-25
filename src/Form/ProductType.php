@@ -24,7 +24,7 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('Name', TextType::class)
-            ->add('Price', MoneyType::class, ['currency'=> 'MAD'])
+            ->add('Price', MoneyType::class)
             ->add('TTC', CheckboxType::class, [
                 'mapped' => false,
                 'attr' => ['checked' => 'true'],
