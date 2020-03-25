@@ -8,6 +8,7 @@ use App\Entity\Product;
 use App\Form\ProductType;
 use App\Repository\OrderDetailRepository;
 use App\Repository\ProductRepository;
+use App\Service\ProductFormHandler;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -132,10 +133,10 @@ class ProductController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function save(Request $request)
+    public function save(Request $request, ProductFormHandler $formHandler)
     {
 
-        // for Q2
+        // for Q2 TP1
         //$form = $this->createFormBuilder($product)
         //   ->add('Name', TextType::class)
         //   ->add('Price', MoneyType::class)
@@ -149,12 +150,7 @@ class ProductController extends AbstractController
         //->getForm();
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $product = $form->getData();
-            $this->entityManager->persist($product);
-            $this->entityManager->flush();
-            $this->flashbag->add('success', 'The product is added successfully');
+        if ($formHandler->handle($request, $form)){
             return $this->redirectToRoute('products.index');
         }
         return new Response($this->twig->render('product/add.html.twig', ['form'=> $form->createView()]));
