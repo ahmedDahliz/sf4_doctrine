@@ -5,14 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/data/db/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/data/db/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/mysql.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/undo_001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/data/db/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/undo_002" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200323085731.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200323090428.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200323094254.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200323155009.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +207,7 @@
       <workItem from="1584794904503" duration="2465000" />
       <workItem from="1584887519682" duration="11842000" />
       <workItem from="1585036285862" duration="23413000" />
-      <workItem from="1585121950194" duration="5575000" />
+      <workItem from="1585121950194" duration="6788000" />
     </task>
     <servers />
   </component>
