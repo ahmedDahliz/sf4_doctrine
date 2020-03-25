@@ -109,16 +109,16 @@ class ProductController extends AbstractController
     {
         //for Q2
         //$form = $this->createFormBuilder($product)
-//          ->add('Name', TextType::class)
-//          ->add('Price', MoneyType::class)
-//          ->add('Quantity', IntegerType::class)
-//          ->add('imageUrl', HiddenType::class, array(
-//              'label' => 'Image',
-//              'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
-//          ))
-//          ->add('Description', TextareaType::class)
-//          ->add('save', SubmitType::class, ['label' => 'Submit'])
-//          ->getForm();
+        //->add('Name', TextType::class)
+        //->add('Price', MoneyType::class)
+        //->add('Quantity', IntegerType::class)
+        //->add('imageUrl', HiddenType::class, array(
+        //'label' => 'Image',
+        //'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
+        //))
+        //->add('Description', TextareaType::class)
+        //->add('save', SubmitType::class, ['label' => 'Submit'])
+        //->getForm();
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
         return new Response($this->twig->render('product/add.html.twig', ['form'=> $form->createView()]));
@@ -127,33 +127,32 @@ class ProductController extends AbstractController
     /**
      * @Route("/products/save", name="products.save")
      * @param Request $request
-     * @param ValidatorInterface $validator
      * @return Response
      * @throws \Twig\Error\LoaderError
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function save(Request $request, ValidatorInterface $validator)
+    public function save(Request $request)
     {
 
         // for Q2
-//        $form = $this->createFormBuilder($product)
-//            ->add('Name', TextType::class)
-//            ->add('Price', MoneyType::class)
-//            ->add('Quantity', IntegerType::class)
-//            ->add('Description', TextareaType::class)
-//            ->add('imageUrl', TextareaType::class, array(
-//                'label' => 'Image',
-//                'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
-//            ))
-//            ->add('save', SubmitType::class, ['label' => 'Submit'])
-//            ->getForm();
+        //$form = $this->createFormBuilder($product)
+        //   ->add('Name', TextType::class)
+        //   ->add('Price', MoneyType::class)
+        //   ->add('Quantity', IntegerType::class)
+        //   ->add('Description', TextareaType::class)
+        //   ->add('imageUrl', TextareaType::class, array(
+        //      'label' => 'Image',
+        //    'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'
+        //))
+        //->add('save', SubmitType::class, ['label' => 'Submit'])
+        //->getForm();
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
-//        $errors =  $validator->validate($product);
         if ($form->isSubmitted() && $form->isValid()) {
             $product = $form->getData();
+//            dd($form->get('Price')->setData(22));
             $this->entityManager->persist($product);
             $this->entityManager->flush();
             $this->flashbag->add('success', 'The product is added successfully');

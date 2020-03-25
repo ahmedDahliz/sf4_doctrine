@@ -25,6 +25,9 @@
 			{{ form_widget(form.Price) }}
 		</div>
 		<div class="form-group">
+			{{ form_widget(form.TTC, {'checked': 'true'}) }}
+		</div>
+		<div class="form-group">
 			<label for="product_Price" class="required">Quantity</label>
 			{{ form_widget(form.Quantity) }}
 		</div>
