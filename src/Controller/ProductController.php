@@ -151,7 +151,7 @@ class ProductController extends AbstractController
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
         $form->handleRequest($request);
-
+//        $errors =  $validator->validate($product);
         if ($form->isSubmitted() && $form->isValid()) {
             $product = $form->getData();
             $this->entityManager->persist($product);

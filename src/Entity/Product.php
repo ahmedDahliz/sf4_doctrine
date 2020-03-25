@@ -27,7 +27,9 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @Assert\NotBlank(
+     *     message="The name should not be blank !"
+     * )
      * @Assert\Length(
      *      max = 25,
      *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
@@ -48,7 +50,9 @@ class Product
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank
+     * @Assert\NotBlank(
+     *     message="The quantity should not be blank !"
+     * )
      * @Assert\Range(
      *      min = 10,
      *      max = 10000,
@@ -61,6 +65,9 @@ class Product
 
     /**
      * @ORM\Column(type="text")
+     * * @Assert\NotBlank(
+     *     message="The description should not be blank !"
+     * )
      * @Assert\Length(
      *      max = 100,
      *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
