@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\Product;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
@@ -29,6 +31,9 @@ class ProductType extends AbstractType
                 'required' => false
             ])
             ->add('Quantity', IntegerType::class)
+            ->add('Category', EntityType::class, [
+                'class'=>Category::class
+            ])
             ->add('imageUrl', HiddenType::class, array(
                 'label' => 'Image',
                 'data' => 'https://hbr.org/resources/images/article_assets/2019/11/Nov19_14_sb10067951dd-001.jpg'

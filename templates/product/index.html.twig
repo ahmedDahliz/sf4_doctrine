@@ -24,6 +24,7 @@
                 <th>Name</th>
                 <th>price</th>
                 <th>quantity</th>
+                <th>Category</th>
                 <th>description</th>
                 <th>create at</th>
                 <th>Add to basket</th>
@@ -38,6 +39,7 @@
                 <td>{{ product.getName }}</td>
                 <td>{{ product.getPrice| price }}</td>
                 <td>{{ product.getQuantity }}</td>
+                <td>{{ product.getCategory }}</td>
                 <td>{{ product.getDescription }}</td>
                 <td>{{ product.getCreatedAt|date('Y-m-d') }}</td>
                 <td>
