@@ -2,10 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a0059f-4d05-4601-b6b2-907a3f9a4b7f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sf4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sf4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_1.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_10.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_2.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_3.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_4.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_5.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_6.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_7.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_8.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/#innodb_temp/temp_9.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/binlog.index" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/binlog.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/data/db/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/data/db/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/mysql.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/undo_001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/data/db/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/docker/data/db/undo_002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +162,25 @@
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/api-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZCcfeTssW4WM3xhyRfB3cmm8UO" />
@@ -207,7 +248,9 @@
       <workItem from="1584794904503" duration="2465000" />
       <workItem from="1584887519682" duration="11842000" />
       <workItem from="1585036285862" duration="23413000" />
-      <workItem from="1585121950194" duration="11554000" />
+      <workItem from="1585121950194" duration="16419000" />
+      <workItem from="1585207739406" duration="3018000" />
+      <workItem from="1585215613010" duration="9241000" />
     </task>
     <servers />
   </component>
